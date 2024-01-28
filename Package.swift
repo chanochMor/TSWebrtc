@@ -14,10 +14,6 @@ let package = Package(
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
         // Targets can depend on other targets in this package and products from dependencies.
-        .target(
-            name: "TSWebRTC"),
-        .testTarget(
-            name: "TSWebRTCTests",
-            dependencies: ["TSWebRTC"]),
+        .binaryTarget(name: "TSWebRTC", url: "https://sdk-us.techsee.me/ios/staging/TSWebRTC_1.0.0.xcframework.zip", checksum: "4aa64a8738e95e566eed14a03c1c186b997be7f5a289712e05c28c3f05eefbbc")
     ]
 )
